@@ -407,6 +407,7 @@ const Home: NextPage = () => {
 	}
 	const SECTIONS = [
 		<Box
+			key={"1"}
 			className={SEL}
 			sx={{
 				height: height,
@@ -415,54 +416,44 @@ const Home: NextPage = () => {
 		>
 			<Section1 />
 		</Box>,
-		<Box className={SEL}>
+		<Box className={SEL} key={"2"}>
 			<Section2 />
 		</Box>
 		,
-		<Box className={SEL}>
+		<Box className={SEL} key={"3"}>
 			<Section3 />
 		</Box>
 		,
-		<Box className={SEL}>
+		<Box className={SEL} key={"4"}>
 			<Section4 />
 		</Box>,
-		<Box className={SEL}>
+		<Box className={SEL} key={"5"}>
 			<Section5 />
 		</Box>,
-		<Box className={SEL}>
+		<Box className={SEL} key={"6"}>
 			<Section6 />
 		</Box>,
-		<Box className={SEL}>
+		<Box className={SEL} key={"7"}>
 			<Section7 />
 		</Box>,
-		<Box className={SEL}>
+		<Box className={SEL} key={"8"}>
 			<Section8 />
 
 		</Box>,
-		<Box className={SEL}>
+		<Box className={SEL} key={"9"}>
 			<Section9 />
-
-
 		</Box>,
-		// <Box className={SEL}>
-		// 	<FoundedBy className={SEL} sxProps={{ mb: 15 }} />
-		// 	<MainFooter />
-		// </Box>,
-
-
-		// <div className={SEL}>
-		// 	<h3>4</h3>
-		// </div>
 	]
 	return (
 		<HomeLayoutNew sxProps={{ background: '#fff' }} headerLandingPage={true}>
 			<ReactFullpage
-				debug /* Debug logging */
+				// debug /* Debug logging */
 				// Required when using extensions
 				pluginWrapper={pluginWrapper}
+
 				// fullpage options
-				licenseKey={"YOUR_KEY_HERE"} // Get one from https://alvarotrigo.com/fullPage/pricing/
-				navigation
+				// licenseKey={"YOUR_KEY_HERE"} // Get one from https://alvarotrigo.com/fullPage/pricing/
+				// navigation
 				anchors={["1", "2", "3", "4", "5", "6", "7", "8", "9"]}
 				sectionSelector={SECTION_SEL}
 				onLeave={onLeave}
